@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Nico Live Opener",
+  "version": "1.0",
+  "description": "ニコニコ生放送の登録したユーザの生放送がはじまったとき自動でタブを開きます",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://live.nicovideo.jp/*",
+    "https://www.nicovideo.jp/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://live.nicovideo.jp/watch/lv*"],
+      "js": ["watch.js"]
+    },
+    {
+      "matches": ["https://www.nicovideo.jp/my/follow*"],
+      "js": ["follow.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
