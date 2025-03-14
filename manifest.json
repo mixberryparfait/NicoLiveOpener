@@ -6,9 +6,13 @@
   "permissions": [
     "tabs",
     "storage",
-    "alarms"
+    "alarms",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback"
   ],
   "host_permissions": [
+    "https://api.feed.nicovideo.jp/*",
     "https://live.nicovideo.jp/*",
     "https://www.nicovideo.jp/*"
   ],
